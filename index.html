@@ -59,7 +59,6 @@ h1,h2,h3{
   padding:0 32px;
 }
 
-/* ---------- ARCH MOTIF (signature element) ---------- */
 .arch-divider{
   width:100%;
   height:56px;
@@ -70,7 +69,6 @@ h1,h2,h3{
 }
 .arch-divider svg{ height:100%; }
 
-/* ---------- HEADER ---------- */
 header{
   position:fixed;
   top:0; left:0; right:0;
@@ -152,7 +150,6 @@ nav a:hover::after{ width:100%; }
   background:var(--navy);
 }
 
-/* ---------- HERO ---------- */
 .hero{
   position:relative;
   min-height:100vh;
@@ -233,7 +230,6 @@ nav a:hover::after{ width:100%; }
 }
 .btn-outline:hover{ border-color:var(--ivory); background:rgba(251,248,242,0.08); }
 
-/* ---------- SECTION GENERIC ---------- */
 section{ padding:110px 0; }
 .section-head{
   max-width:640px;
@@ -245,7 +241,6 @@ section{ padding:110px 0; }
   line-height:1.1;
 }
 
-/* ---------- ABOUT ---------- */
 .about{ background:var(--cream); }
 .about-grid{
   display:grid;
@@ -295,7 +290,6 @@ section{ padding:110px 0; }
 }
 .pillar p{ font-size:16px; color:#5a5f74; }
 
-/* ---------- SERVICES ---------- */
 .services{ background:var(--ivory); }
 .tabs{
   display:flex;
@@ -372,7 +366,6 @@ section{ padding:110px 0; }
   font-size:19px;
 }
 
-/* ---------- GALLERY ---------- */
 .gallery{ background:var(--cream); }
 .gallery-grid{
   columns:4 260px;
@@ -407,7 +400,6 @@ section{ padding:110px 0; }
   margin-top:44px;
 }
 
-/* Lightbox */
 .lightbox{
   position:fixed; inset:0;
   background:rgba(18,22,43,0.94);
@@ -456,7 +448,6 @@ section{ padding:110px 0; }
   .lightbox-nav{ font-size:28px; }
 }
 
-/* ---------- SIGNATURE STRIP ---------- */
 .signature-strip{
   background:var(--navy);
   padding:70px 0;
@@ -474,7 +465,6 @@ section{ padding:110px 0; }
   line-height:1.4;
 }
 
-/* ---------- CONTACT ---------- */
 .contact{ background:var(--cream); }
 .contact-grid{
   display:grid;
@@ -586,7 +576,6 @@ form.rdv{
 .form-msg.show{ display:block; }
 .form-msg.ok{ color:#3a6b4f; }
 
-/* ---------- FOOTER ---------- */
 footer{
   background:var(--navy-deep);
   color:rgba(251,248,242,0.6);
@@ -610,7 +599,6 @@ footer .foot-links{
 footer .foot-links a:hover{ color:var(--gold-light); }
 footer .copyright{ margin-top:20px; font-size:12px; color:rgba(251,248,242,0.35); }
 
-/* ---------- SKIP LINK / A11Y ---------- */
 .skip-link{
   position:absolute;
   left:-999px;
@@ -627,7 +615,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   outline-offset:2px;
 }
 
-/* ---------- RESPONSIVE ---------- */
 @media (max-width: 900px){
   nav, .nav-cta{ display:none; }
   .burger{ display:flex; }
@@ -687,7 +674,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 <main id="main">
 
-  <!-- HERO -->
   <section class="hero" id="top">
     <div class="hero-bg-pattern"></div>
     <div class="hero-inner">
@@ -712,7 +698,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     </div>
   </section>
 
-  <!-- ABOUT -->
   <section class="about" id="about">
     <div class="container about-grid">
       <div class="about-portrait">
@@ -746,7 +731,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     </div>
   </section>
 
-  <!-- SERVICES -->
   <section class="services" id="services">
     <div class="container">
       <div class="section-head">
@@ -760,7 +744,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
         <button class="tab-btn" data-tab="dreadlocks" role="tab" aria-selected="false">Dreadlocks</button>
       </div>
 
-      <!-- ONGLERIE -->
       <div class="tab-panel active" id="panel-onglerie">
         <div class="svc-group">
           <h3>Prestations nails</h3>
@@ -781,7 +764,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
         <p class="svc-note">Fidélité et parrainage — sur demande, renseignement en salon.</p>
       </div>
 
-      <!-- TRESSAGE -->
       <div class="tab-panel" id="panel-tressage">
         <div class="svc-group">
           <h3>Nattes collées</h3>
@@ -808,7 +790,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
         </div>
       </div>
 
-      <!-- DREADLOCKS -->
       <div class="tab-panel" id="panel-dreadlocks">
         <div class="svc-group">
           <h3>Création</h3>
@@ -828,7 +809,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     </div>
   </section>
 
-  <!-- GALLERY -->
   <section class="gallery" id="gallery">
     <div class="container">
       <div class="section-head">
@@ -890,7 +870,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     </div>
   </section>
 
-  <!-- Lightbox viewer -->
   <div class="lightbox" id="lightbox">
     <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">&times;</button>
     <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Photo précédente">&#8249;</button>
@@ -898,7 +877,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Photo suivante">&#8250;</button>
   </div>
 
-  <!-- SIGNATURE STRIP -->
   <section class="signature-strip">
     <div class="arch-divider" aria-hidden="true">
       <svg viewBox="0 0 200 56" width="200" height="56">
@@ -910,7 +888,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     <p>« Prendre soin de soi, c'est aussi révéler ce qui nous rend unique. »</p>
   </section>
 
-  <!-- CONTACT / RDV -->
   <section class="contact" id="contact">
     <div class="container contact-grid">
       <div>
@@ -922,14 +899,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
             <div class="info-icon">☎</div>
             <div>
               <h4>Téléphone</h4>
-              <a href="tel:+33752365921">07 52 36 59 21</a>
+              <p>07 52 36 59 21</p>
             </div>
           </div>
           <div class="info-item">
             <div class="info-icon">✉</div>
             <div>
               <h4>Email</h4>
-              <a href="mailto:universbyb@gmail.com">universbyb@gmail.com</a>
+              <p>universbyb@gmail.com</p>
             </div>
           </div>
           <div class="info-item">
@@ -945,7 +922,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
               <h4>Réseaux sociaux — @universbyboris</h4>
               <div class="social-row">
                 <a href="https://instagram.com/universbyboris" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-                <!-- <a href="https://tiktok.com/@universbyboris" target="_blank" rel="noopener" aria-label="TikTok">TT</a> -->
                 <a href="https://www.facebook.com/share/1JiHhAUD8f/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
               </div>
             </div>
@@ -1031,8 +1007,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
       <a href="#about">L'univers</a>
       <a href="#services">Prestations</a>
       <a href="#rdv">Rendez-vous</a>
-      <a href="tel:+33752365921">07 52 36 59 21</a>
-      <a href="mailto:universbyb@gmail.com">universbyb@gmail.com</a>
+      <span>07 52 36 59 21</span>
+      <span>universbyb@gmail.com</span>
     </div>
     <p>131 Rue Faidherbe, 62200 Boulogne-sur-Mer</p>
     <p class="copyright">© 2026 Univers by Boris. Tous droits réservés. — Mentions légales</p>
@@ -1040,7 +1016,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 </footer>
 
 <script>
-// ---- Mobile nav toggle ----
 const burger = document.getElementById('burgerBtn');
 const nav = document.getElementById('siteNav');
 const navCta = document.getElementById('navCta');
@@ -1057,7 +1032,6 @@ document.querySelectorAll('nav a, .nav-cta').forEach(link=>{
   });
 });
 
-// ---- Gallery lightbox ----
 const galleryImgs = Array.from(document.querySelectorAll('#galleryGrid img'));
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
@@ -1087,7 +1061,6 @@ document.addEventListener('keydown', (e) => {
   if(e.key === 'ArrowLeft') showPrev();
 });
 
-// ---- Tabs ----
 const tabBtns = document.querySelectorAll('.tab-btn');
 const panels = document.querySelectorAll('.tab-panel');
 tabBtns.forEach(btn=>{
@@ -1100,13 +1073,11 @@ tabBtns.forEach(btn=>{
   });
 });
 
-// ---- Header background on scroll ----
 const header = document.querySelector('header');
 window.addEventListener('scroll', ()=>{
   header.style.boxShadow = window.scrollY > 20 ? '0 4px 20px rgba(27,33,64,0.06)' : 'none';
 });
 
-// ---- RDV form ----
 const form = document.getElementById('rdvForm');
 const formMsg = document.getElementById('formMsg');
 form.addEventListener('submit', (e)=>{
@@ -1123,9 +1094,11 @@ form.addEventListener('submit', (e)=>{
   const body = encodeURIComponent(
     `Nom : ${nom}\nTéléphone : ${tel}\nEmail : ${email}\nPrestation : ${prestation}\nDate souhaitée : ${date || 'non précisée'}\n\nMessage :\n${message || '—'}`
   );
-  window.location.href = `mailto:universbyb@gmail.com?subject=${subject}&body=${body}`;
 
-  formMsg.textContent = "Votre logiciel de messagerie va s'ouvrir avec votre demande pré-remplie. Vous pouvez aussi nous appeler directement au 07 52 36 59 21.";
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=universbyb@gmail.com&su=${subject}&body=${body}`;
+  window.open(gmailUrl, '_blank');
+
+  formMsg.innerHTML = "Gmail s'est ouvert dans un nouvel onglet avec votre demande pré-remplie — il ne reste plus qu'à cliquer sur Envoyer. Si rien ne s'ouvre, vous pouvez aussi nous écrire directement à <a href=\"mailto:universbyb@gmail.com\" style=\"color:var(--gold); text-decoration:underline;\">universbyb@gmail.com</a> ou nous appeler au 07 52 36 59 21.";
   formMsg.classList.add('show','ok');
 });
 </script>
