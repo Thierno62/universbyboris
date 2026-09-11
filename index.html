@@ -1095,10 +1095,28 @@ form.addEventListener('submit', (e)=>{
     `Nom : ${nom}\nTéléphone : ${tel}\nEmail : ${email}\nPrestation : ${prestation}\nDate souhaitée : ${date || 'non précisée'}\n\nMessage :\n${message || '—'}`
   );
 
-  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=universbyb@gmail.com&su=${subject}&body=${body}`;
-  window.open(gmailUrl, '_blank');
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-  formMsg.innerHTML = "Gmail s'est ouvert dans un nouvel onglet avec votre demande pré-remplie — il ne reste plus qu'à cliquer sur Envoyer. Si rien ne s'ouvre, vous pouvez aussi nous écrire directement à <a href=\"mailto:universbyb@gmail.com\" style=\"color:var(--gold); text-decoration:underline;\">universbyb@gmail.com</a> ou nous appeler au 07 52 36 59 21.";
+  if (isMobile) {
+    // Sur mobile, on cible directement l'écran de COMPOSITION de l'app Gmail
+    // (le lien web mail.google.com est intercepté par l'app et n'ouvre que la boîte de réception)
+    const gmailAppUrl = `googlegmail:///co?to=universbyb@gmail.com&subject=${subject}&body=${body}`;
+    const mailtoUrl = `mailto:universbyb@gmail.com?subject=${subject}&body=${body}`;
+
+    // Si l'app Gmail n'est pas installée ou ne répond pas, on bascule automatiquement sur mailto
+    let handed = false;
+    window.addEventListener('pagehide', () => { handed = true; }, { once: true });
+    window.location.href = gmailAppUrl;
+    setTimeout(() => {
+      if (!handed) window.location.href = mailtoUrl;
+    }, 700);
+  } else {
+    // Sur ordinateur : ouvre Gmail web dans un nouvel onglet, ça fonctionne bien
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=universbyb@gmail.com&su=${subject}&body=${body}`;
+    window.open(gmailUrl, '_blank');
+  }
+
+  formMsg.innerHTML = "Une fenêtre de rédaction s'ouvre avec votre demande pré-remplie — il ne reste plus qu'à cliquer sur Envoyer. Si rien ne s'ouvre, vous pouvez aussi nous écrire directement à <a href=\"mailto:universbyb@gmail.com\" style=\"color:var(--gold); text-decoration:underline;\">universbyb@gmail.com</a> ou nous appeler au 07 52 36 59 21.";
   formMsg.classList.add('show','ok');
 });
 </script>
