@@ -520,61 +520,30 @@ section{ padding:110px 0; }
 }
 .map-embed iframe{ width:100%; height:260px; border:0; display:block; }
 
-form.rdv{
+.planity-card{
   background:var(--ivory);
   padding:44px;
   border-radius:4px;
   border:1px solid var(--line);
+  text-align:center;
 }
-.field{ margin-bottom:22px; }
-.field label{
-  display:block;
-  font-family:var(--font-utility);
-  font-size:13px;
-  text-transform:uppercase;
-  letter-spacing:0.1em;
-  color:var(--navy);
-  margin-bottom:8px;
+.planity-lede{
+  font-size:19px;
+  color:#4a4f66;
+  margin-bottom:30px;
+  line-height:1.6;
 }
-.field input, .field select, .field textarea{
+.planity-btn{
   width:100%;
-  padding:13px 14px;
-  border:1px solid var(--line);
-  background:#fff;
-  font-family:var(--font-body);
-  font-size:17px;
-  color:var(--ink);
-  border-radius:2px;
-}
-.field input:focus, .field select:focus, .field textarea:focus{
-  outline:2px solid var(--gold);
-  outline-offset:1px;
-}
-.field-row{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
-.field textarea{ resize:vertical; min-height:100px; }
-.submit-btn{
-  width:100%;
-  font-family:var(--font-utility);
-  text-transform:uppercase;
-  letter-spacing:0.12em;
-  font-size:14px;
-  padding:16px;
-  background:var(--navy);
-  color:var(--ivory);
-  border:none;
-  border-radius:2px;
-  cursor:pointer;
-  transition:background .25s ease;
-}
-.submit-btn:hover{ background:var(--gold); color:var(--navy); }
-.form-msg{
-  margin-top:16px;
+  padding:18px;
   font-size:15px;
-  font-family:var(--font-utility);
-  display:none;
 }
-.form-msg.show{ display:block; }
-.form-msg.ok{ color:#3a6b4f; }
+.planity-alt{
+  margin-top:24px;
+  font-size:16px;
+  color:#5a5f74;
+}
+.planity-alt strong{ color:var(--navy); }
 
 footer{
   background:var(--navy-deep);
@@ -921,7 +890,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
             <div>
               <h4>Réseaux sociaux — @universbyboris</h4>
               <div class="social-row">
-                <a href="https://instagram.com/universbyboris" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+                <a href="https://www.instagram.com/universbyb/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
                 <a href="https://www.facebook.com/share/1JiHhAUD8f/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
               </div>
             </div>
@@ -938,59 +907,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
       <div id="rdv">
         <p class="eyebrow">Réservation</p>
         <h2 style="margin:10px 0 26px;">Prendre rendez-vous</h2>
-        <form class="rdv" id="rdvForm">
-          <div class="field-row">
-            <div class="field">
-              <label for="nom">Nom complet</label>
-              <input type="text" id="nom" name="nom" required autocomplete="name">
-            </div>
-            <div class="field">
-              <label for="tel">Téléphone</label>
-              <input type="tel" id="tel" name="tel" required autocomplete="tel">
-            </div>
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required autocomplete="email">
-          </div>
-          <div class="field-row">
-            <div class="field">
-              <label for="prestation">Prestation souhaitée</label>
-              <select id="prestation" name="prestation" required>
-                <option value="" disabled selected>Choisir une prestation</option>
-                <optgroup label="Onglerie">
-                  <option>Rallongement Gel X / Demi capsule</option>
-                  <option>Gainage + semi permanent</option>
-                  <option>Remplissage</option>
-                  <option>Nail art</option>
-                </optgroup>
-                <optgroup label="Tressage">
-                  <option>Nattes collées</option>
-                  <option>Tresses libres</option>
-                  <option>Tissage / Pose de perruque</option>
-                  <option>Rituel signature</option>
-                </optgroup>
-                <optgroup label="Dreadlocks">
-                  <option>Création dreadlocks (devis)</option>
-                  <option>Doublage</option>
-                  <option>Reprise des racines</option>
-                  <option>Entretien / chignons</option>
-                </optgroup>
-                <option>Autre / je ne sais pas encore</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="date">Date souhaitée</label>
-              <input type="date" id="date" name="date">
-            </div>
-          </div>
-          <div class="field">
-            <label for="message">Message (optionnel)</label>
-            <textarea id="message" name="message" placeholder="Précisez vos disponibilités, votre projet..."></textarea>
-          </div>
-          <button type="submit" class="submit-btn">Envoyer ma demande</button>
-          <p class="form-msg" id="formMsg"></p>
-        </form>
+        <div class="planity-card">
+          <p class="planity-lede">Réservez votre créneau en ligne, 24h/24, avec confirmation immédiate — toutes nos prestations et tarifs sont disponibles directement sur notre page de réservation.</p>
+          <a href="https://www.planity.com/univers-by-boris-62200-boulogne-sur-mer" target="_blank" rel="noopener" class="btn btn-gold planity-btn" style="background:var(--navy); color:var(--ivory);">
+            Réserver sur Planity
+          </a>
+          <p class="planity-alt">Vous préférez réserver par téléphone ? Appelez-nous au <strong>07 52 36 59 21</strong>.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -1076,48 +999,6 @@ tabBtns.forEach(btn=>{
 const header = document.querySelector('header');
 window.addEventListener('scroll', ()=>{
   header.style.boxShadow = window.scrollY > 20 ? '0 4px 20px rgba(27,33,64,0.06)' : 'none';
-});
-
-const form = document.getElementById('rdvForm');
-const formMsg = document.getElementById('formMsg');
-form.addEventListener('submit', (e)=>{
-  e.preventDefault();
-  const data = new FormData(form);
-  const nom = data.get('nom');
-  const tel = data.get('tel');
-  const email = data.get('email');
-  const prestation = data.get('prestation');
-  const date = data.get('date');
-  const message = data.get('message');
-
-  const subject = encodeURIComponent(`Demande de RDV — ${nom}`);
-  const body = encodeURIComponent(
-    `Nom : ${nom}\nTéléphone : ${tel}\nEmail : ${email}\nPrestation : ${prestation}\nDate souhaitée : ${date || 'non précisée'}\n\nMessage :\n${message || '—'}`
-  );
-
-  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-  if (isMobile) {
-    // Sur mobile, on cible directement l'écran de COMPOSITION de l'app Gmail
-    // (le lien web mail.google.com est intercepté par l'app et n'ouvre que la boîte de réception)
-    const gmailAppUrl = `googlegmail:///co?to=universbyb@gmail.com&subject=${subject}&body=${body}`;
-    const mailtoUrl = `mailto:universbyb@gmail.com?subject=${subject}&body=${body}`;
-
-    // Si l'app Gmail n'est pas installée ou ne répond pas, on bascule automatiquement sur mailto
-    let handed = false;
-    window.addEventListener('pagehide', () => { handed = true; }, { once: true });
-    window.location.href = gmailAppUrl;
-    setTimeout(() => {
-      if (!handed) window.location.href = mailtoUrl;
-    }, 700);
-  } else {
-    // Sur ordinateur : ouvre Gmail web dans un nouvel onglet, ça fonctionne bien
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=universbyb@gmail.com&su=${subject}&body=${body}`;
-    window.open(gmailUrl, '_blank');
-  }
-
-  formMsg.innerHTML = "Une fenêtre de rédaction s'ouvre avec votre demande pré-remplie — il ne reste plus qu'à cliquer sur Envoyer. Si rien ne s'ouvre, vous pouvez aussi nous écrire directement à <a href=\"mailto:universbyb@gmail.com\" style=\"color:var(--gold); text-decoration:underline;\">universbyb@gmail.com</a> ou nous appeler au 07 52 36 59 21.";
-  formMsg.classList.add('show','ok');
 });
 </script>
 
